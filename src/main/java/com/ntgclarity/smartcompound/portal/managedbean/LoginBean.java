@@ -7,12 +7,15 @@ import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 import javax.faces.event.AbortProcessingException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 import com.ntgclarity.smartcompound.common.constatnt.MessagesKeys;
+import com.ntgclarity.smartcompound.exception.SmartCompoundException;
 import com.ntgclarity.smartcompound.portal.base.BaseBean;
 import com.ntgclarity.smartcompound.portal.utils.WebUtils;
 
@@ -20,6 +23,9 @@ import com.ntgclarity.smartcompound.portal.utils.WebUtils;
 @ViewScoped
 public class LoginBean extends BaseBean implements Serializable {
 
+	static final Logger logger = LogManager.getLogger(LoginBean.class
+			.getName());
+	
 	@ManagedProperty(value = "#{customAuthenticationProvider}")
 	private AuthenticationProvider authenticationProvider;
 
@@ -44,7 +50,7 @@ public class LoginBean extends BaseBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	public void login() {
+	public void login() throws SmartCompoundException {
 		UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
 				userName, password);
 
@@ -55,10 +61,13 @@ public class LoginBean extends BaseBean implements Serializable {
 		WebUtils.injectIntoSession("SPRING_SECURITY_CONTEXT",
 				SecurityContextHolder.getContext());
 
+		logger.info("throw exception ");
 		// addInfoMessage(MessagesKeys.SMART_COMPOUND_LOGIN_INFO_MSG);
 		// System.out.println("Authenticated");
-		throw new AbortProcessingException("Done!!");
-
+		throw new SmartCompoundException("throw****** SmartCompoundException");
+//		throw new NullPointerException("throw***** new NullPointerException");
+//		throw new AbortProcessingException("Done!!");
+		
 	}
 
 	public AuthenticationProvider getAuthenticationProvider() {
