@@ -12,6 +12,6 @@
 
 	</application>
 	<factory>
-		<exception-handler-factory>com.ntgclarity.smartcompound.exception.CustomExceptionHandlerFactory</exception-handler-factory>
+		<exception-handler-factory>com.ntgclarity.smartcompound.common.exception.CustomExceptionHandlerFactory</exception-handler-factory>
 	</factory>
 </faces-config>
