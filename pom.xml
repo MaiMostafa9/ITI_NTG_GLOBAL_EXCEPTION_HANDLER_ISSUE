@@ -138,15 +138,15 @@
 			<version>2.2.1.GA</version>
 		</dependency>
 
-  
+
 		<dependency>
 			<groupId>org.jboss.resteasy</groupId>
 			<artifactId>resteasy-jackson-provider</artifactId>
 			<version>2.2.1.GA</version>
-		</dependency> 
+		</dependency>
 
 
-		<!-- Added By Karim  -->
+		<!-- Added By Karim -->
 		<!-- Related for log4j2 -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -157,6 +157,15 @@
 			<artifactId>log4j-core</artifactId>
 		</dependency>
 
+		<!-- Added by Mai -->
+		<!-- start Web Socket -->
+		<dependency>
+			<groupId>org.atmosphere</groupId>
+			<artifactId>atmosphere-runtime</artifactId>
+			<version>2.3.0-RC5</version>
+		</dependency>
+		
+		<!-- End Web Socket -->
 	</dependencies>
 
 	<build>

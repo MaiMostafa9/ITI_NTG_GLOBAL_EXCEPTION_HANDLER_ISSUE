@@ -37,26 +37,29 @@ public class CustomExceptionHandler extends ExceptionHandlerWrapper {
 	}
 
 	@Override
-	public void handle() throws FacesException {
+	public void handle() throws FacesException{
 		logger.entry();
 		baseBean=new BaseBean();
 		for (Iterator<ExceptionQueuedEvent> i = getUnhandledExceptionQueuedEvents().iterator(); i.hasNext();) {
 			ExceptionQueuedEvent event = i.next();
-			ExceptionQueuedEventContext context = (ExceptionQueuedEventContext) event.getSource();
+			ExceptionQueuedEventContext context =  (ExceptionQueuedEventContext) event.getSource();
 
-			//FacesContext fc = FacesContext.getCurrentInstance();
+			FacesContext fc = FacesContext.getCurrentInstance();
 			Throwable t = context.getException();
 			try {
-				// if (t instanceof AbortProcessingException) {
-				// System.out.println("An unexpected exception has occurred by event listener(s)"+t.getMessage()+"local  "+t.getLocalizedMessage());
-				baseBean.addInfoMessage(t.getLocalizedMessage());
-			//	fc.addMessage(null, new FacesMessage(	FacesMessage.SEVERITY_INFO,"",""));
-				// }
+				if (t instanceof SmartCompoundException) {
+				// System.out.println("An unexpected exception has occurred by event listener(s)"+"local  "+t.getLocalizedMessage());
+				//baseBean.addInfoMessage(t.getLocalizedMessage());
+				//SmartCompoundException smartCompoundException=(SmartCompoundException)t;
+				System.out.println(t.getLocalizedMessage());
+				fc.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO,t.getLocalizedMessage(),""));
+				 }
 			} finally {
 				i.remove();
 			}
 
 		}
+        getWrapped().handle();
 	}
 
 }

@@ -47,5 +47,9 @@ public class SmartCompoundException extends Exception{
     public String getMessage() {
         return message;
     }
+    @Override
+	public String getLocalizedMessage() {
+		return message;
+	}
 
 }

@@ -50,8 +50,7 @@ public class LoginBean extends BaseBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	public void login() 
-		 throws SmartCompoundException {
+	public void login() throws SmartCompoundException {
 		UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
 				userName, password);
 
@@ -63,10 +62,12 @@ public class LoginBean extends BaseBean implements Serializable {
 				SecurityContextHolder.getContext());
 
 		logger.info("throw exception ");
-		 //addInfoMessage(MessagesKeys.SMART_COMPOUND_LOGIN_INFO_MSG);
-		 throw new SmartCompoundException(MessagesKeys.SMART_COMPOUND_LOGIN_INFO_MSG);
-		// throw new NullPointerException("throw***** new NullPointerException");
-		//throw new AbortProcessingException("Done!!");
+		// addInfoMessage(MessagesKeys.SMART_COMPOUND_LOGIN_INFO_MSG);
+		throw new SmartCompoundException(
+				MessagesKeys.SMART_COMPOUND_LOGIN_INFO_MSG);
+		// throw new
+		// NullPointerException("throw***** new NullPointerException");
+		// throw new AbortProcessingException("Done!!");
 
 	}
 
