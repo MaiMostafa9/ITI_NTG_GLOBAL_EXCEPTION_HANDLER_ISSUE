@@ -12,7 +12,7 @@
 </h:head>
 <h:body>
 	<center>
-		<h2>Order</h2>
+		<h2>#{msgs.SMART_COMPOUND_ORDER_PAGE_HEADER}</h2>
 	</center>
 	<h:form>
 		<b:container layout="fluid">
@@ -23,84 +23,84 @@
 			</b:row>
 			<b:row>
 				<b:column medium-screen="2">
-					<h:outputText value="Order ID" />
+					<h:outputText value="#{msgs.SMART_COMPOUND_ORDER_PAGE_ORDER_ID}" />
 				</b:column>
 				<b:column medium-screen="4">
 					<b:selectOneMenu style="width:100%">
-						<f:selectItem itemLabel="Select One" />
+						<f:selectItem itemLabel="#{msgs.SMART_COMPOUND_ORDER_PAGE_SELECT_ONE}" />
 					</b:selectOneMenu>
 				</b:column>
 			</b:row>
 			<b:row>
 				<b:column medium-screen="2">
-					<h:outputText value="Tenant ID" />
+					<h:outputText value="#{msgs.SMART_COMPOUND_ORDER_PAGE_TENANT_ID}" />
 				</b:column>
 				<b:column medium-screen="4">
 					<b:selectOneMenu style="width:100%">
-						<f:selectItem itemLabel="Select One" />
+						<f:selectItem itemLabel="#{msgs.SMART_COMPOUND_ORDER_PAGE_SELECT_ONE}" />
 					</b:selectOneMenu>
 				</b:column>
 			</b:row>
 			<b:row>
 				<b:column medium-screen="2">
-					<h:outputText value="Facility ID" />
+					<h:outputText value="#{msgs.SMART_COMPOUND_ORDER_PAGE_FACILITY_ID}" />
 				</b:column>
 				<b:column medium-screen="4">
 					<b:selectOneMenu style="width:100%">
-						<f:selectItem itemLabel="Select One" />
+						<f:selectItem itemLabel="#{msgs.SMART_COMPOUND_ORDER_PAGE_SELECT_ONE}" />
 					</b:selectOneMenu>
 				</b:column>
 			</b:row>
 			<b:row>
 				<b:column medium-screen="2">
-					<h:outputText value="Service ID" />
+					<h:outputText value="#{msgs.SMART_COMPOUND_ORDER_PAGE_SERVICE_ID}" />
 				</b:column>
 				<b:column medium-screen="4">
 					<b:selectOneMenu style="width:100%">
-						<f:selectItem itemLabel="Select One" />
+						<f:selectItem itemLabel="#{msgs.SMART_COMPOUND_ORDER_PAGE_SELECT_ONE}" />
 					</b:selectOneMenu>
 				</b:column>
 			</b:row>
 			<b:row>
 				<b:column medium-screen="2">
-					<h:outputText value="Service name" />
+					<h:outputText value="#{msgs.SMART_COMPOUND_ORDER_PAGE_SERVICE_NAME}" />
 				</b:column>
 				<b:column medium-screen="4">
 					<b:selectOneMenu style="width:100%">
-						<f:selectItem itemLabel="Select One" />
+						<f:selectItem itemLabel="#{msgs.SMART_COMPOUND_ORDER_PAGE_SELECT_ONE}" />
 					</b:selectOneMenu>
 				</b:column>
 			</b:row>
 			<b:row>
 				<b:column medium-screen="2">
-					<h:outputText value="Created by" />
+					<h:outputText value="#{msgs.SMART_COMPOUND_ORDER_PAGE_CREATED_BY}" />
 				</b:column>
 				<b:column medium-screen="4">
 					<b:inputText required="true"
-						requiredMessage="Created by is required " />
+						requiredMessage="#{msgs.SMART_COMPOUND_ORDER_PAGE_CREATED_BY_REQUIRED_MESSAGE} " />
 				</b:column>
 			</b:row>
 			<b:row>
 				<b:column medium-screen="2">
-					<h:outputText value="Service Location longitude" />
+					<h:outputText value="#{msgs.SMART_COMPOUND_ORDER_PAGE_SERVICE_LOCATION_LONGITUDE}"  />
 				</b:column>
 				<b:column medium-screen="4">
 					<b:inputText required="true"
-						requiredMessage="Service Location longitude is required " />
+						requiredMessage="#{msgs.SMART_COMPOUND_ORDER_PAGE_SERVICE_LOCATION_LONGITUDE_REQUIRED_MESSAGE}" />
 				</b:column>
 			</b:row>
 			<b:row>
 				<b:column medium-screen="2">
-					<h:outputText value="Service Location lattitude" />
+					<h:outputText value="#{msgs.SMART_COMPOUND_ORDER_PAGE_SERVICE_LOCATION_LATITUDE}" />
 				</b:column>
 				<b:column medium-screen="4">
 					<b:inputText required="true"
-						requiredMessage="Servce Location lattitude is required " />
+						requiredMessage="#{msgs.SMART_COMPOUND_ORDER_PAGE_SERVICE_LOCATION_LATITUDE_REQUIRED_MESSAGE}" />
 				</b:column>
 			</b:row>
 			<b:row>
 				<b:column medium-screen="2">
-					<h:outputText value="Service Location Description" />
+					<h:outputText value="#{msgs.SMART_COMPOUND_ORDER_PAGE_SERVICE_LOCATION_DESCRIPTION}"/>
 				</b:column>
 				<b:column medium-screen="4">
 					<b:inputTextarea />
@@ -108,34 +108,34 @@
 			</b:row>
 			<b:row>
 				<b:column medium-screen="2">
-					<h:outputText value="Contract term" />
+					<h:outputText value="#{msgs.SMART_COMPOUND_ORDER_PAGE_CONTRACT_TERM}" />
 				</b:column>
 				<b:column medium-screen="4">
 					<b:inputText required="true"
-						requiredMessage="Contract term is required " />
+						requiredMessage="#{msgs.SMART_COMPOUND_ORDER_PAGE_CONTRACT_TERM_REQUIRED_MESSAGE}" />
 				</b:column>
 			</b:row>
 			<b:row>
 				<b:column medium-screen="2">
-					<h:outputText value="Meter ID" />
+					<h:outputText value="#{msgs.SMART_COMPOUND_ORDER_PAGE_METER_ID}" />
 				</b:column>
 				<b:column medium-screen="4">
 					<b:inputText required="true"
-						requiredMessage="Meter ID is required " />
+						requiredMessage="#{msgs.SMART_COMPOUND_ORDER_PAGE_METER_ID_REQUIRED_MESSAGE}" />
 				</b:column>
 			</b:row>
 			<b:row>
 				<b:column medium-screen="2">
-					<h:outputText value="Meter last reading" />
+					<h:outputText value="#{msgs.SMART_COMPOUND_ORDER_PAGE_METER_LAST_READING}" />
 				</b:column>
 				<b:column medium-screen="4">
 					<b:inputText required="true"
-						requiredMessage="Meter last reading is required " />
+						requiredMessage="#{msgs.SMART_COMPOUND_ORDER_PAGE_METER_LAST_READING_REQUIRED_MESSAGE}" />
 				</b:column>
 			</b:row>
 			<b:row>
 				<b:column medium-screen="2">
-					<h:outputText value="Meter last reading Date" />
+					<h:outputText value="#{msgs.SMART_COMPOUND_ORDER_PAGE_METER_LAST_READING_DATE}" />
 				</b:column>
 				<b:column medium-screen="4">
 					<b:datepicker /> 
@@ -144,7 +144,7 @@
 
 			<b:row>
 				<b:column medium-screen="2">
-					<h:outputText value="One Time Fee Billed" />
+					<h:outputText value="#{msgs.SMART_COMPOUND_ORDER_PAGE_ONE_TIME_FEE_BILLED}" />
 				</b:column>
 				<b:column medium-screen="4">
 					<b:selectBooleanCheckbox />
@@ -153,7 +153,7 @@
 
 			<b:row>
 				<b:column medium-screen="2">
-					<h:outputText value="One Time Fee Billed Date" />
+					<h:outputText value="#{msgs.SMART_COMPOUND_ORDER_PAGE_ONE_TIME_FEE_BILLED_DATE}" />
 				</b:column>
 				<b:column medium-screen="4">
 					<b:datepicker/> 
@@ -161,7 +161,7 @@
 			</b:row>
 			<b:row>
 				<b:column medium-screen="2">
-					<h:outputText value="Notes" />
+					<h:outputText value="#{msgs.SMART_COMPOUND_ORDER_PAGE_NOTES}" />
 				</b:column>
 				<b:column medium-screen="4">
 					<b:inputTextarea />
@@ -169,10 +169,10 @@
 			</b:row>
 			<b:row>
 				<b:column span="2" offset="2">
-					<b:commandButton value="Submit" look="success" style="width:100%" />
+					<b:commandButton value="#{msgs.SMART_COMPOUND_ORDER_PAGE_SUBMIT_BUTTON}" look="success" style="width:100%" />
 				</b:column>
 				<b:column span="2">
-					<b:commandButton value="Cancel" look="warning" style="width:100%" />
+					<b:commandButton value="#{msgs.SMART_COMPOUND_ORDER_PAGE_CANCEL_BUTTON}" look="warning" style="width:100%" />
 				</b:column>
 			</b:row>
 
