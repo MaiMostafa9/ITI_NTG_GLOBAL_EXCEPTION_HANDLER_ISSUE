@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
+<h:head>
+	<h:outputStylesheet library="css" name="smart-compound-style.css" />
+	<h:outputScript library="js" name="smart-compound-scripts.js" />
+</h:head>
+<h:body>
+	<center>
+		<h2>Order</h2>
+	</center>
+	<h:form>
+		<b:container layout="fluid">
+			<b:row>
+				<b:column medium-screen="12">
+					<b:messages id="message" />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="Order ID" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:selectOneMenu style="width:100%">
+						<f:selectItem itemLabel="Select One" />
+					</b:selectOneMenu>
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="Tenant ID" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:selectOneMenu style="width:100%">
+						<f:selectItem itemLabel="Select One" />
+					</b:selectOneMenu>
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="Facility ID" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:selectOneMenu style="width:100%">
+						<f:selectItem itemLabel="Select One" />
+					</b:selectOneMenu>
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="Service ID" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:selectOneMenu style="width:100%">
+						<f:selectItem itemLabel="Select One" />
+					</b:selectOneMenu>
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="Service name" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:selectOneMenu style="width:100%">
+						<f:selectItem itemLabel="Select One" />
+					</b:selectOneMenu>
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="Created by" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:inputText required="true"
+						requiredMessage="Created by is required " />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="Service Location longitude" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:inputText required="true"
+						requiredMessage="Service Location longitude is required " />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="Service Location lattitude" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:inputText required="true"
+						requiredMessage="Servce Location lattitude is required " />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="Service Location Description" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:inputTextarea />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="Contract term" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:inputText required="true"
+						requiredMessage="Contract term is required " />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="Meter ID" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:inputText required="true"
+						requiredMessage="Meter ID is required " />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="Meter last reading" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:inputText required="true"
+						requiredMessage="Meter last reading is required " />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="Meter last reading Date" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:datepicker /> 
+				</b:column>
+			</b:row>
+
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="One Time Fee Billed" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:selectBooleanCheckbox />
+				</b:column>
+			</b:row>
+
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="One Time Fee Billed Date" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:datepicker/> 
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="Notes" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:inputTextarea />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column span="2" offset="2">
+					<b:commandButton value="Submit" look="success" style="width:100%" />
+				</b:column>
+				<b:column span="2">
+					<b:commandButton value="Cancel" look="warning" style="width:100%" />
+				</b:column>
+			</b:row>
+
+		</b:container>
+	</h:form>
+
+</h:body>
+</html>
