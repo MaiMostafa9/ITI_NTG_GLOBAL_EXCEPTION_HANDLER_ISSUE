@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
+<h:head>
+	<h:outputStylesheet library="css" name="smart-compound-style.css" />
+	<h:outputScript library="js" name="smart-compound-scripts.js" />
+</h:head>
+<h:body>
+	<center>
+		<h2>#{msgs.SMART_COMPOUND_SERVICE_PAGE_TITLE}</h2>
+
+	</center>
+	<h:form>
+		<b:container layout="fluid">
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="#{msgs.SMART_COMPOUND_SERVICE_PAGE_NAME}" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:inputText required="true"
+						requiredMessage="#{msgs.SMART_COMPOUND_SERVICE_PAGE_NAME_REQUIRED}" />
+				</b:column>
+			</b:row>
+
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="#{msgs.SMART_COMPOUND_SERVICE_PAGE_SEVERITY}" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:inputText required="true"
+						requiredMessage="#{msgs.SMART_COMPOUND_SERVICE_PAGE_SEVERITY_REQUIRED}" />
+				</b:column>
+			</b:row>
+
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText
+						value="#{msgs.SMART_COMPOUND_SERVICE_PAGE_DATE_CREATED}" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:datepicker />
+				</b:column>
+			</b:row>
+
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText
+						value="#{msgs.SMART_COMPOUND_SERVICE_PAGE_FLAT_OR_USAGE}" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:selectOneMenu style="width:100%">
+						<f:selectItem itemLabel="Select One" />
+						<f:selectItem itemLabel="#{msgs.SMART_COMPOUND_SERVICE_PAGE_FLAT}" />
+						<f:selectItem
+							itemLabel="#{msgs.SMART_COMPOUND_SERVICE_PAGE_USAGE}" />
+					</b:selectOneMenu>
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="#{msgs.SMART_COMPOUND_SERVICE_PAGE_IS_ACTIVE}" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:selectOneMenu style="width:100%">
+						<f:selectItem itemLabel="Select One" />
+						<f:selectItem
+							itemLabel="#{msgs.SMART_COMPOUND_SERVICE_PAGE_ACTIVE}" />
+						<f:selectItem
+							itemLabel="#{msgs.SMART_COMPOUND_SERVICE_PAGE_NOT_ACTIVE}" />
+					</b:selectOneMenu>
+				</b:column>
+			</b:row>
+
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="#{msgs.SMART_COMPOUND_SERVICE_PAGE_PRE_POST}" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:selectOneMenu style="width:100%">
+						<f:selectItem itemLabel="Select One" />
+						<f:selectItem
+							itemLabel="#{msgs.SMART_COMPOUND_SERVICE_PAGE_PREPAID}" />
+						<f:selectItem
+							itemLabel="#{msgs.SMART_COMPOUND_SERVICE_PAGE_POSTPAID}" />
+					</b:selectOneMenu>
+				</b:column>
+			</b:row>
+
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText
+						value="#{msgs.SMART_COMPOUND_SERVICE_PAGE_UNIT_OF_MEASURE}" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:selectOneMenu style="width:100%">
+						<f:selectItem itemLabel="Select One" />
+						<f:selectItem itemLabel="#{msgs.SMART_COMPOUND_SERVICE_PAGE_TIME}" />
+						<f:selectItem
+							itemLabel="#{msgs.SMART_COMPOUND_SERVICE_PAGE_LITTER}" />
+					</b:selectOneMenu>
+				</b:column>
+			</b:row>
+
+
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText
+						value="#{msgs.SMART_COMPOUND_SERVICE_PAGE_FLAT_OR_USAGE}" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:selectOneMenu style="width:100%">
+						<f:selectItem itemLabel="Select One" />
+						<f:selectItem itemLabel="#{msgs.SMART_COMPOUND_SERVICE_PAGE_FLAT}" />
+						<f:selectItem
+							itemLabel="#{msgs.SMART_COMPOUND_SERVICE_PAGE_USAGE}" />
+					</b:selectOneMenu>
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="#{msgs.SMART_COMPOUND_SERVICE_PAGE_NRC}" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:inputText />
+				</b:column>
+			</b:row>
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText value="#{msgs.SMART_COMPOUND_SERVICE_PAGE_MRC}" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:inputText />
+				</b:column>
+
+			</b:row>
+
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText
+						value="#{msgs.SMART_COMPOUND_SERVICE_PAGE_INSTALLATION_PRICE}" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:inputText />
+				</b:column>
+
+			</b:row>
+
+
+			<b:row>
+				<b:column medium-screen="2">
+					<h:outputText
+						value="#{msgs.SMART_COMPOUND_SERVICE_PAGE_DESCRIPTION}" />
+				</b:column>
+				<b:column medium-screen="4">
+					<b:inputTextarea />
+				</b:column>
+			</b:row>
+
+			<b:row>
+				<b:column span="2" offset="2">
+					<b:commandButton value="Submit" look="success" style="width:100%" />
+				</b:column>
+				<b:column span="2">
+					<b:commandButton value="Cancel" look="warning" style="width:100%" />
+				</b:column>
+			</b:row>
+
+		</b:container>
+	</h:form>
+
+</h:body>
+</html>
