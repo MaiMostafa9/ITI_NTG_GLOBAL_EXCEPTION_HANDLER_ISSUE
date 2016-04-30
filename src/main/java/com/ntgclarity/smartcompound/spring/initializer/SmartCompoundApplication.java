@@ -9,7 +9,11 @@ import org.springframework.context.annotation.ImportResource;
 @EnableAutoConfiguration()  
 @SpringBootApplication      
 @Configuration   
-@ImportResource(locations = "classpath:/spring/database/database.xml")  
+/** 
+ * update by karim 
+ **/
+@ImportResource(locations = 
+		{"classpath:/spring/database/database.xml","classpath:/spring/database/spring-context.xml"})  
 @ComponentScan("com.**") 
 // search the com.company package for @Component classes
 public class SmartCompoundApplication {    

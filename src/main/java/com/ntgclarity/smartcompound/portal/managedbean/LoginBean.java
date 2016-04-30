@@ -16,6 +16,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 
 import com.ntgclarity.smartcompound.common.constatnt.MessagesKeys;
 import com.ntgclarity.smartcompound.common.exception.SmartCompoundException;
+import com.ntgclarity.smartcompound.common.spring.applicationcontext.SpringApplicationContext;
+import com.ntgclarity.smartcompound.mail.Mail;
+import com.ntgclarity.smartcompound.mail.Mailer;
 import com.ntgclarity.smartcompound.portal.base.BaseBean;
 import com.ntgclarity.smartcompound.portal.utils.WebUtils;
 
@@ -66,6 +69,27 @@ public class LoginBean extends BaseBean implements Serializable {
 		throw new SmartCompoundException(
 				MessagesKeys.SMART_COMPOUND_LOGIN_INFO_MSG);
 	}
+	
+	/** 
+	 * adding by karim 
+	 **/
+	public void forgetPassword() {
+		Mail mail = new Mail();
+		mail.setMailFrom("karimmm.fadel@gmail.com");
+		mail.setMailTo("kiko.fadel1991@gmail.com");
+		mail.setMailSubject("Subject - Send Email using Spring  Velocity Template");
+//		mail.setMailContent("Simple Example to send email using Spring");
+		mail.setTemplateName("emailtemplate.vm");
+
+		Mailer mailer = (Mailer) SpringApplicationContext
+				.getApplicationContext().getBean("mailer");
+		mailer.sendMail(mail);
+
+		logger.info("Send Email success ");
+
+		addInfoMessage(MessagesKeys.SMART_COMPOUND_LOGIN_INFO_MSG);
+	}
+
 
 	public AuthenticationProvider getAuthenticationProvider() {
 		return authenticationProvider;
