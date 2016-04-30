@@ -22,7 +22,8 @@ import java.util.Iterator;
  */
 public class CustomExceptionHandler extends ExceptionHandlerWrapper {
 
-	static final Logger logger = LogManager.getLogger(CustomExceptionHandler.class.getName());
+	static final Logger logger = LogManager
+			.getLogger(CustomExceptionHandler.class.getName());
 
 	private ExceptionHandler exceptionHandler;
 	private BaseBean baseBean;
@@ -37,29 +38,26 @@ public class CustomExceptionHandler extends ExceptionHandlerWrapper {
 	}
 
 	@Override
-	public void handle() throws FacesException{
+	public void handle() throws FacesException {
 		logger.entry();
-		baseBean=new BaseBean();
-		for (Iterator<ExceptionQueuedEvent> i = getUnhandledExceptionQueuedEvents().iterator(); i.hasNext();) {
+		baseBean = new BaseBean();
+		for (Iterator<ExceptionQueuedEvent> i = getUnhandledExceptionQueuedEvents()
+				.iterator(); i.hasNext();) {
 			ExceptionQueuedEvent event = i.next();
-			ExceptionQueuedEventContext context =  (ExceptionQueuedEventContext) event.getSource();
+			ExceptionQueuedEventContext context = (ExceptionQueuedEventContext) event
+					.getSource();
+			Throwable t = getRootCause(context.getException());
 
-			FacesContext fc = FacesContext.getCurrentInstance();
-			Throwable t = context.getException();
 			try {
 				if (t instanceof SmartCompoundException) {
-				// System.out.println("An unexpected exception has occurred by event listener(s)"+"local  "+t.getLocalizedMessage());
-				//baseBean.addInfoMessage(t.getLocalizedMessage());
-				//SmartCompoundException smartCompoundException=(SmartCompoundException)t;
-				System.out.println(t.getLocalizedMessage());
-				fc.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO,t.getLocalizedMessage(),""));
-				 }
+					baseBean.addInfoMessage(t.getLocalizedMessage());
+				}
 			} finally {
 				i.remove();
 			}
 
 		}
-        getWrapped().handle();
+		getWrapped().handle();
 	}
 
 }

@@ -65,10 +65,6 @@ public class LoginBean extends BaseBean implements Serializable {
 		// addInfoMessage(MessagesKeys.SMART_COMPOUND_LOGIN_INFO_MSG);
 		throw new SmartCompoundException(
 				MessagesKeys.SMART_COMPOUND_LOGIN_INFO_MSG);
-		// throw new
-		// NullPointerException("throw***** new NullPointerException");
-		// throw new AbortProcessingException("Done!!");
-
 	}
 
 	public AuthenticationProvider getAuthenticationProvider() {
